@@ -1,12 +1,18 @@
+"use client";
 import { Logo } from "../constants/index";
 import { FaCartArrowDown, FaHeart, FaSearch, FaUser } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 import { TextField } from "@mui/material";
 import { useSearchContext } from "@/context/searchContext";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const { handleInputChange } = useSearchContext();
+  const pathname = usePathname();
+  const isActive = (href) => {
+    return pathname === href ? "text-pink-500 border-b-2 border-pink-500" : "";
+  };
 
   return (
     <header className=" ">
@@ -16,16 +22,24 @@ const Header = () => {
       >
         <ul className="flex gap-10">
           <li>
-            <Link href="/">Home</Link>
+            <Link className={isActive("/")} href="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link href="/clothes">Clothes</Link>
+            <Link className={isActive("/clothes")} href="/clothes">
+              Clothes
+            </Link>
           </li>
           <li>
-            <Link href="/shoes">Shoes</Link>
+            <Link className={isActive("/shoes")} href="/shoes">
+              Shoes
+            </Link>
           </li>
           <li>
-            <Link href="/accessories">Accessories</Link>
+            <Link className={isActive("/accessories")} href="/accessories">
+              Accessories
+            </Link>
           </li>
         </ul>
         <div>
@@ -42,7 +56,7 @@ const Header = () => {
             />
             <FaSearch />
           </div>
-          <ul className="flex gap-2">
+          <ul className="flex gap-6">
             <li>
               <FaUser />
             </li>

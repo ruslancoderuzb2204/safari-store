@@ -1,30 +1,39 @@
 "use client";
-import PaginationPage from "@/components/pagination";
+import { useState } from "react";
 import Products from "@/containers/products";
 import SideBar from "@/containers/sideBar";
+import PaginationPage from "@/components/pagination";
 import { accessoriesData } from "@/data";
 import { useSearchContext } from "@/context/searchContext";
-import { useState } from "react";
 
 const Accessories = () => {
   const { searchValue } = useSearchContext();
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedOption, setSelectedOption] = useState("Popular"); 
+  const [selectedOption, setSelectedOption] = useState("Popular");
   const itemsPerPage = 6;
 
-  const filteredData = accessoriesData
-    .filter((item) =>
-      item.description.toLowerCase().includes(searchValue.toLowerCase())
-    )
-    .sort((a, b) => {
-      if (selectedOption === "Popular") {
+  const filteredData = searchValue
+    ? accessoriesData.filter((item) =>
+        item.description.toLowerCase().includes(searchValue.toLowerCase())
+      )
+    : accessoriesData;
+
+  const sortedData = filteredData.slice().sort((a, b) => {
+    switch (selectedOption) {
+      case "Popular":
         return a.id - b.id;
-      } else if (selectedOption === "Best Selling") {
+      case "Best Selling":
         return b.id - a.id;
-      } else {
+      case "Newest":
+        return b.id - a.id;
+      case "PriceHighToLow":
+        return b.price - a.price;
+      case "PriceLowToHigh":
+        return a.price - b.price;
+      default:
         return 0;
-      }
-    });
+    }
+  });
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -55,17 +64,19 @@ const Accessories = () => {
               >
                 <option value="Popular">Most Popular</option>
                 <option value="Best Selling">Best Selling</option>
-                {/* Add other sorting options as needed */}
+                <option value="Newest">Newest</option>
+                <option value="PriceHighToLow">Price: High to Low</option>
+                <option value="PriceLowToHigh">Price: Low to High</option>
               </select>
             </div>
             <Products
               gridColStyle="grid-cols-3"
-              data={filteredData.slice(startIndex, endIndex)}
+              data={sortedData.slice(startIndex, endIndex)}
             />
           </div>
         </div>
         <PaginationPage
-          data={filteredData}
+          data={sortedData}
           itemsPerPage={itemsPerPage}
           onPageChange={handlePageChange}
         />

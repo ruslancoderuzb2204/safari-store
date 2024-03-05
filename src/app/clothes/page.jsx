@@ -1,15 +1,15 @@
 "use client";
-import PaginationPage from "@/components/pagination";
+import { useState } from "react";
 import Products from "@/containers/products";
 import SideBar from "@/containers/sideBar";
-import { useSearchContext } from "@/context/searchContext";
+import PaginationPage from "@/components/pagination";
 import { accessoriesData } from "@/data";
-import { useState } from "react";
+import { useSearchContext } from "@/context/searchContext";
 
 const Clothes = () => {
   const { searchValue } = useSearchContext();
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedOption, setSelectedOption] = useState("Popular"); // Default selected option
+  const [selectedOption, setSelectedOption] = useState("Popular");
   const itemsPerPage = 6;
 
   const filteredData = searchValue
@@ -20,8 +20,6 @@ const Clothes = () => {
 
   const sortedData = filteredData.slice().sort((a, b) => {
     switch (selectedOption) {
-      case "all":
-        return filteredData;
       case "Popular":
         return a.id - b.id;
       case "Newest":
@@ -47,35 +45,39 @@ const Clothes = () => {
   };
 
   return (
-    <section>
-      <h1>Clothes</h1>
-      <div className="flex gap-10">
-        <div className="w-1/3">
-          <SideBar />
-        </div>
-        <div>
-          <div className="pb-3 mb-4 flex justify-end border-b-2 border-gray-400">
-            <select name="Select" id="select" onChange={handleSelectChange}>
-              <option defaultChecked defaultValue={"all"} value="all">
-                Sorted By:
-              </option>
-              <option value="Popular">Most Popular</option>
-              <option value="Newest">Newest</option>
-              <option value="PriceHighToLow">Price: High to Low</option>
-              <option value="PriceLowToHigh">Price: Low to High</option>
-            </select>
+    <section className="flex container justify-center">
+      <div>
+        <h1 className="text-4xl mb-6 font-semibold">Clothes</h1>
+        <div className="flex items-start gap-10">
+          <div className="w-1/3">
+            <SideBar title="Clothes" />
           </div>
-          <Products
-            gridColStyle="grid-cols-3"
-            data={sortedData.slice(startIndex, endIndex)}
-          />
+          <div>
+            <div className="pb-3 mb-4 flex justify-end border-b-2 border-gray-400">
+              <select
+                name="Select"
+                id=""
+                value={selectedOption}
+                onChange={handleSelectChange}
+              >
+                <option value="Popular">Most Popular</option>
+                <option value="Newest">Newest</option>
+                <option value="PriceHighToLow">Price: High to Low</option>
+                <option value="PriceLowToHigh">Price: Low to High</option>
+              </select>
+            </div>
+            <Products
+              gridColStyle="grid-cols-3"
+              data={sortedData.slice(startIndex, endIndex)}
+            />
+          </div>
         </div>
+        <PaginationPage
+          data={sortedData}
+          itemsPerPage={itemsPerPage}
+          onPageChange={handlePageChange}
+        />
       </div>
-      <PaginationPage
-        data={sortedData}
-        itemsPerPage={itemsPerPage}
-        onPageChange={handlePageChange}
-      />
     </section>
   );
 };

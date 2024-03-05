@@ -43,7 +43,7 @@ const Home = () => {
   }, [index]);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex  flex-col items-center justify-center">
       <Carousel
         index={index}
         autoPlay={false}
@@ -51,7 +51,7 @@ const Home = () => {
         indicators={false}
         animation="slide"
         onChange={(newIndex) => setIndex(newIndex)}
-        className="w-1/4 h-96 max-w-screen-lg"
+        className="w-full flex justify-center items-center mx-auto bg-[#ED165F]"
       >
         {images &&
           images.map((image) => (
@@ -61,7 +61,7 @@ const Home = () => {
               alt={`Slide ${image.id + 1}`}
               width={1000}
               height={1000}
-              className="w-96 h-96"
+              className="w-[600px] mx-auto flex justify-center slider h-[600px]"
             />
           ))}
       </Carousel>

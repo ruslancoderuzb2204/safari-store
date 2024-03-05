@@ -4,15 +4,17 @@ const logo =
 const getRandomPrice = () => {
   return Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000; // Random price between 1000 and 10000
 };
+import sliderImg from "./constants/opa.jpg";
 export const images = [
-  { logo, id: 1 },
-  { logo, id: 2 },
-  { logo, id: 3 },
+  { logo: sliderImg, id: 1 },
+  { logo: sliderImg, id: 2 },
+  { logo: sliderImg, id: 3 },
 ];
 export let homeData = [
   {
     id: 1,
-    image: logo,
+    image:
+      "https://cdn-images.farfetch-contents.com/18/91/46/06/18914606_41214467_1000.jpg",
     description: "Multicolored armless top",
     price: getRandomPrice(),
     category: "denim",
@@ -22,7 +24,7 @@ export let homeData = [
   },
   {
     id: 2,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzs6dxJ0rRA023FH5UH1mEPejruAR_aRETSg&usqp=CAU",
     description: "Grey bee wrist-watch",
     price: getRandomPrice(),
     category: "jeans",
@@ -32,7 +34,8 @@ export let homeData = [
   },
   {
     id: 3,
-    image: logo,
+    image:
+      "https://www.bodenimages.com/productimages/r1aproductlarge/23waut_r0441_blk.jpg",
     description: "Mini skirt",
     price: getRandomPrice(),
     category: "jackets and coats",
@@ -42,7 +45,8 @@ export let homeData = [
   },
   {
     id: 4,
-    image: logo,
+    image:
+      "https://bdci.imgix.net/i/8cfefd69_bd22br03-22_red_1.jpg?fit=fill&w=500&h=500&bg=fff&q=90&nrs=80&x=1",
     description: "Red lightweight gown",
     price: getRandomPrice(),
     category: "sweaters & knits",
@@ -52,7 +56,8 @@ export let homeData = [
   },
   {
     id: 5,
-    image: logo,
+    image:
+      "https://res.cloudinary.com/wolfandbadger/image/upload/f_auto,q_auto:best,c_pad,h_800,w_800/products/floral-button-down-maxi-dress-blue__389ed968670c430b0b5029f0c69b5ec2",
     description: "Blue botton-down gown",
     price: getRandomPrice(),
     category: "leather",
@@ -62,7 +67,8 @@ export let homeData = [
   },
   {
     id: 6,
-    image: logo,
+    image:
+      "https://slimages.macysassets.com/is/image/MCY/products/3/optimized/19553333_fpx.tif?$browse$&wid=178&fmt=jpeg",
     description: "Moon and star neckpiece",
     price: getRandomPrice(),
     category: "skirts",
@@ -72,7 +78,8 @@ export let homeData = [
   },
   {
     id: 7,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRUo8wjSJE4rraZqPVNDZO1WxNdTb8EuBS8g&usqp=CAU",
     description: "Tambourine Crossbody Bag",
     price: getRandomPrice(),
     category: "jumpsuits",
@@ -82,7 +89,8 @@ export let homeData = [
   },
   {
     id: 8,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg2ALrmVdY_ov9tbaxoX9oEHM01QCi7YDJqQ&usqp=CAU",
     description: "Katy Perry Killer Queen EDP",
     price: getRandomPrice(),
     category: "tops",
@@ -92,7 +100,8 @@ export let homeData = [
   },
   {
     id: 9,
-    image: logo,
+    image:
+      "https://cdn4.vectorstock.com/i/1000x1000/33/98/woman-fashion-shoes-on-high-heels-vector-4753398.jpg",
     description: "High heels ladies shoes",
     price: getRandomPrice(),
     category: "dresses",
@@ -102,7 +111,8 @@ export let homeData = [
   },
   {
     id: 10,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy-hiJ1Iu2fk7KnfqS0SNoYxuQWZ9crKUUyw&usqp=CAU",
     description: "Nerdy oval glasses",
     price: getRandomPrice(),
     category: "tops",
@@ -112,7 +122,8 @@ export let homeData = [
   },
   {
     id: 11,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7BpuSH3IvYBZ-mNfW-1IaVVUu7Sji-MRDjA&usqp=CAU",
     description: "Diamond ladies ring",
     price: getRandomPrice(),
     category: "dresses",
@@ -122,7 +133,8 @@ export let homeData = [
   },
   {
     id: 12,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa5NrFXcgdeJeL6oMV8Aq2LoWeqBCajsjM2Q&usqp=CAU",
     description: "Ladies bush pants",
     price: getRandomPrice(),
     category: "jumpsuits",
@@ -132,7 +144,8 @@ export let homeData = [
   },
   {
     id: 13,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQ1c2vD4AB52Hy8D8P4xemoZbe4GJiwj54g&usqp=CAU",
     description: "Guilhermina Embellished Slides",
     price: getRandomPrice(),
     category: "jeans",
@@ -142,7 +155,8 @@ export let homeData = [
   },
   {
     id: 14,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSigcmALwDd2g0916xVuSWRVZLTcXZe-VnA1g&usqp=CAU",
     description: "Superga Plaid Sneakers",
     price: getRandomPrice(),
     category: "denim",
@@ -152,7 +166,8 @@ export let homeData = [
   },
   {
     id: 15,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqqhVWVoDEBdH4rbIlS3yCUGGqRDfQ5QTIw&usqp=CAU",
     description: "Checked ladies trouser",
     price: getRandomPrice(),
     category: "dresses",
@@ -162,7 +177,8 @@ export let homeData = [
   },
   {
     id: 16,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo-4CMqoRwn4zZdAUKK6Uik3nSJnuxhttUXw&usqp=CAU",
     description: "Beanie winter fleece",
     price: getRandomPrice(),
     category: "pants",
@@ -172,7 +188,8 @@ export let homeData = [
   },
   {
     id: 17,
-    image: logo,
+    image:
+      "https://cdn4.vectorstock.com/i/1000x1000/33/98/woman-fashion-shoes-on-high-heels-vector-4753398.jpg",
     description: "High heels ladies shoes",
     price: getRandomPrice(),
     category: "loungerie & underwear",
@@ -182,7 +199,8 @@ export let homeData = [
   },
   {
     id: 18,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaj7zsk8i3iLgR38qGaUE1jvhRIXwrTlsmELehxo_wRrBPce9LtXQzTS2Mt-5smNmuqTI&usqp=CAU",
     description: "Red lightweight gown",
     price: getRandomPrice(),
     category: "skirts",
@@ -192,7 +210,7 @@ export let homeData = [
   },
   {
     id: 19,
-    image: logo,
+    image: "https://slimages.macysassets.com/is/image/MCY/products/3/optimized/19553333_fpx.tif?$browse$&wid=178&fmt=jpeg",
     description: "Moon and star neckpiece",
     price: getRandomPrice(),
     category: "shorts",
@@ -202,7 +220,7 @@ export let homeData = [
   },
   {
     id: 20,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzs6dxJ0rRA023FH5UH1mEPejruAR_aRETSg&usqp=CAU",
     description: "Grey bee wrist-watch",
     price: getRandomPrice(),
     category: "pants",
@@ -212,7 +230,7 @@ export let homeData = [
   },
   {
     id: 21,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg2ALrmVdY_ov9tbaxoX9oEHM01QCi7YDJqQ&usqp=CAU",
     description: "Katy Perry Killer Queen EDP",
     price: getRandomPrice(),
     category: "jackets and coats",
@@ -222,7 +240,8 @@ export let homeData = [
   },
   {
     id: 22,
-    image: logo,
+    image:
+      "https://cdn4.vectorstock.com/i/1000x1000/33/98/woman-fashion-shoes-on-high-heels-vector-4753398.jpg",
     description: "High heels ladies shoes",
     price: getRandomPrice(),
     category: "tops ",
@@ -232,7 +251,8 @@ export let homeData = [
   },
   {
     id: 23,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy-hiJ1Iu2fk7KnfqS0SNoYxuQWZ9crKUUyw&usqp=CAU",
     description: "Nerdy oval glasses",
     price: getRandomPrice(),
     category: "jumpsuits",
@@ -242,7 +262,7 @@ export let homeData = [
   },
   {
     id: 24,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg2ALrmVdY_ov9tbaxoX9oEHM01QCi7YDJqQ&usqp=CAU",
     description: "Katy Perry Killer Queen EDP",
     price: getRandomPrice(),
     category: "jeans",
@@ -252,7 +272,8 @@ export let homeData = [
   },
   {
     id: 25,
-    image: logo,
+    image:
+      "https://cdn4.vectorstock.com/i/1000x1000/33/98/woman-fashion-shoes-on-high-heels-vector-4753398.jpg",
     description: "High heels ladies shoes",
     price: getRandomPrice(),
     category: "denim ",
@@ -262,7 +283,8 @@ export let homeData = [
   },
   {
     id: 26,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy-hiJ1Iu2fk7KnfqS0SNoYxuQWZ9crKUUyw&usqp=CAU",
     description: "Nerdy oval glasses",
     price: getRandomPrice(),
     category: "dresses",
@@ -275,7 +297,7 @@ export let homeData = [
 export let shoesData = [
   {
     id: 27,
-    image: logo,
+    image: "https://cdn4.vectorstock.com/i/1000x1000/33/98/woman-fashion-shoes-on-high-heels-vector-4753398.jpg",
     description: "High heels ladies shoes",
     price: getRandomPrice(),
     type: "boots",
@@ -285,7 +307,7 @@ export let shoesData = [
   },
   {
     id: 28,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRNviAVKV-qeViBVZLV-6dguC9Z0j16r6xiA&usqp=CAU",
     description: "Keds sneakers",
     price: getRandomPrice(),
     type: "sneakers",
@@ -295,7 +317,8 @@ export let shoesData = [
   },
   {
     id: 29,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQ1c2vD4AB52Hy8D8P4xemoZbe4GJiwj54g&usqp=CAU",
     description: "Guilhermina Embellished Slides",
     price: getRandomPrice(),
     type: "sandals",
@@ -305,7 +328,7 @@ export let shoesData = [
   },
   {
     id: 30,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JUPL6nzRgcudIh8b6Kr8ApYmSAwTwHEd2w&usqp=CAU",
     description: "Summer shoes",
     price: getRandomPrice(),
     type: "heels",
@@ -315,7 +338,7 @@ export let shoesData = [
   },
   {
     id: 31,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpivrGVq6fEic4dQ5bfOC1qkz7Ugu1OvYWA&usqp=CAU",
     description: "Casual Flat Loafers",
     price: getRandomPrice(),
     type: "oxfords",
@@ -325,7 +348,7 @@ export let shoesData = [
   },
   {
     id: 32,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcgucJBo9MZyJ9EYsNWRNpE8eYuRzPQjYoOg&usqp=CAU",
     description: "Black strappy peeptoe",
     price: getRandomPrice(),
     type: "booties",
@@ -335,7 +358,7 @@ export let shoesData = [
   },
   {
     id: 33,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSul4tabgRRwJ24RGy8q15wHoVt5al2Aqlh0Q&usqp=CAU",
     description: "Superga Platform Sneakers",
     price: getRandomPrice(),
     type: "sneakers",
@@ -345,7 +368,7 @@ export let shoesData = [
   },
   {
     id: 34,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6CGKLQC95C6bm69O6VOect5mV2nd2UNTbJA&usqp=CAU",
     description: "Heeled sandals",
     price: getRandomPrice(),
     type: "slides",
@@ -355,7 +378,7 @@ export let shoesData = [
   },
   {
     id: 35,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkDzTXN_2qIeppxezi-b4nIlTZC6sm34H0XA&usqp=CAU",
     description: "HAJINK Boat Shoes",
     price: getRandomPrice(),
     type: "mules",
@@ -365,7 +388,7 @@ export let shoesData = [
   },
   {
     id: 36,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxLMkOOSnn1bmTnyd5JPFqkL6HLMlZs6djlQ&usqp=CAU",
     description: "Casual Flat Sandals",
     price: getRandomPrice(),
     type: "sandals",
@@ -375,7 +398,7 @@ export let shoesData = [
   },
   {
     id: 37,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe-smlR4qtr10zQs4dgFCzj7nCtBS48a21KA&usqp=CAU",
     description: "Summer Cork Slippers",
     price: getRandomPrice(),
     type: "slippers",
@@ -385,7 +408,7 @@ export let shoesData = [
   },
   {
     id: 38,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0gor5rHLK3pV63sx594Ad4zfVrapB0_H_pg&usqp=CAU",
     description: "Ankle boots",
     price: getRandomPrice(),
     type: "wedges",
@@ -395,7 +418,7 @@ export let shoesData = [
   },
   {
     id: 39,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JUPL6nzRgcudIh8b6Kr8ApYmSAwTwHEd2w&usqp=CAU",
     description: "Summer shoes",
     price: getRandomPrice(),
     type: "vegan",
@@ -405,7 +428,7 @@ export let shoesData = [
   },
   {
     id: 40,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpivrGVq6fEic4dQ5bfOC1qkz7Ugu1OvYWA&usqp=CAU",
     description: "Casual Flat Loafers",
     price: getRandomPrice(),
     type: "party",
@@ -418,7 +441,7 @@ export let shoesData = [
 export let accessoriesData = [
   {
     id: 42,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRUo8wjSJE4rraZqPVNDZO1WxNdTb8EuBS8g&usqp=CAU",
     description: "Tambourine Crossbody Bag",
     price: getRandomPrice(),
     type: "handbag",
@@ -428,7 +451,7 @@ export let accessoriesData = [
   },
   {
     id: 43,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8tvEUBxL0JXicFNjq3Df3b0-UMaqbzkzaAA&usqp=CAU",
     description: "Summer Handbag",
     price: getRandomPrice(),
     type: "handbag",
@@ -438,7 +461,7 @@ export let accessoriesData = [
   },
   {
     id: 44,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpfLV9kdjA_msmS9-D6rmutCQRWNCZRpOLwA&usqp=CAU",
     description: "Nereide Oval",
     price: getRandomPrice(),
     type: "sunglasses & eyewears",
@@ -448,7 +471,7 @@ export let accessoriesData = [
   },
   {
     id: 45,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7BpuSH3IvYBZ-mNfW-1IaVVUu7Sji-MRDjA&usqp=CAU",
     description: "Diamond ladies ring",
     price: getRandomPrice(),
     type: "jewelry",
@@ -458,7 +481,7 @@ export let accessoriesData = [
   },
   {
     id: 46,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQoa9ZRAd5liMOmtCA5UAyV7Xk6W9ffF2Ew&usqp=CAU",
     description: "Casual baseball cap",
     price: getRandomPrice(),
     type: "hats",
@@ -468,7 +491,7 @@ export let accessoriesData = [
   },
   {
     id: 47,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB3B9VNW-duc5Wxl-awRAsatUMTQijWQkv4A&usqp=CAU",
     description: "Tear-drop stone necklace",
     price: getRandomPrice(),
     type: "jewelry",
@@ -478,7 +501,7 @@ export let accessoriesData = [
   },
   {
     id: 48,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzRKOnHY25USsQUKNUuzL5GAUyDPzsbALSUw&usqp=CAU",
     description: "Ladies luxury watch",
     price: getRandomPrice(),
     type: "watch",
@@ -488,7 +511,7 @@ export let accessoriesData = [
   },
   {
     id: 49,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6CGKLQC95C6bm69O6VOect5mV2nd2UNTbJA&usqp=CAU",
     description: "Heeled sandals",
     price: getRandomPrice(),
     type: "sock",
@@ -498,7 +521,7 @@ export let accessoriesData = [
   },
   {
     id: 50,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuE-BB1npjCnFVPvnu1K9TOl4GIAHV_iZFOA&usqp=CAU",
     description: "Pattern Cloth Face Mask",
     price: getRandomPrice(),
     type: "watch",
@@ -508,7 +531,7 @@ export let accessoriesData = [
   },
   {
     id: 51,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCnxqpEWVBtsHVXmSPSRNqsrPg97hLHxCFAA&usqp=CAU",
     description: "Fashion ladies watch",
     price: getRandomPrice(),
     type: "watch",
@@ -518,7 +541,8 @@ export let accessoriesData = [
   },
   {
     id: 52,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo-4CMqoRwn4zZdAUKK6Uik3nSJnuxhttUXw&usqp=CAU",
     description: "Beanie winter fleece",
     price: getRandomPrice(),
     type: "sock",
@@ -528,7 +552,8 @@ export let accessoriesData = [
   },
   {
     id: 53,
-    image: logo,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlnwg36-KmSBD_-cbvKj0UJjUA3JHkb2jf2Q&usqp=CAU",
     description: "Black ladies backpack",
     price: getRandomPrice(),
     type: "handbag",
@@ -538,7 +563,7 @@ export let accessoriesData = [
   },
   {
     id: 54,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuE-BB1npjCnFVPvnu1K9TOl4GIAHV_iZFOA&usqp=CAU",
     description: "Pattern Cloth Face Mask",
     price: getRandomPrice(),
     type: "handbag",
@@ -548,7 +573,7 @@ export let accessoriesData = [
   },
   {
     id: 55,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCnxqpEWVBtsHVXmSPSRNqsrPg97hLHxCFAA&usqp=CAU",
     description: "Fashion ladies watch",
     price: getRandomPrice(),
     type: "handbag",
@@ -558,7 +583,7 @@ export let accessoriesData = [
   },
   {
     id: 56,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrQoa9ZRAd5liMOmtCA5UAyV7Xk6W9ffF2Ew&usqp=CAU",
     description: "Casual baseball cap",
     price: getRandomPrice(),
     type: "handbag",
@@ -568,7 +593,7 @@ export let accessoriesData = [
   },
   {
     id: 57,
-    image: logo,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB3B9VNW-duc5Wxl-awRAsatUMTQijWQkv4A&usqp=CAU",
     description: "Tear-drop stone necklace",
     price: getRandomPrice(),
     type: "handbag",
